@@ -1,0 +1,19 @@
+name: build docker
+on:
+  workflow_dispatch: # 手动触发
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: Build
+    steps:
+      - name: p1
+        run: echo MY_TAGS=thisyxy  >> $GITHUB_ENV
+
+      - name: Preparation
+        run: |
+          echo '"${{ env.MY_TAGS }}"' > config/level.json
+
+      - name: yz
+        run: cat config/level.json
