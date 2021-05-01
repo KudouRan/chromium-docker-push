@@ -3,7 +3,7 @@ on:
   workflow_dispatch: # 手动触发
 jobs:
   build:
-    if: github.repository == 'catlair/bili-task-puppeteer'
+    if: github.repository == 'KudouRan/chromium-docker-push'
     runs-on: ubuntu-latest
     environment: Build
     steps:
